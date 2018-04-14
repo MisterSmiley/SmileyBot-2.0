@@ -1,8 +1,9 @@
 {
   "name": "smileybot", 
-  "version": "1.0.0",
-  "engines": {
-    "node": "8.9.4"
+  "description": "A discord bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "description": "A discord bot",
   "dependencies": {
