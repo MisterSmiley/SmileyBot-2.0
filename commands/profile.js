@@ -20,7 +20,7 @@ exports.run = async (client, msg, args) => {
         ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
         ctx.shadowOffsetY = 2;
         ctx.shadowBlur = 2;
-            fs.readFile('../images/profiletest.png', (err, profile) => {
+            fs.readFile('./images/profiletest.png', (err, profile) => {
                 if (err) return console.log(err);
                 let that = new Image;
                 that.src = profile;
