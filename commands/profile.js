@@ -37,12 +37,6 @@ exports.run = async (client, msg, args) => {
                         ava.src = buf;
                         ctx.drawImage(ava, 117, 122, 550, 550);
 
-                        //Name
-                        ctx.font = "bold 175px Helvetica";
-                        ctx.fillStyle = "#FFFFFF";
-                        ctx.textAlign = "left";
-                        ctx.fillText(user.username, 55, 985);
-
                         //Sent
                         try {
                             sent = snumber(sent);
