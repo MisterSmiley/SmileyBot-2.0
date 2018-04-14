@@ -1,6 +1,6 @@
 {
   "name": "smileybot",
-  "version": "5.6.0",
+  "version": "0.0.1",
   "description": "A discord bot",
   "dependencies": {
     "api-npm": "^1.0.0",
