@@ -21,8 +21,6 @@ You can invite SmileyBot by clicking
 2. Download Node.JS here: https://nodejs.org/fr/
 3. Open cmd and type `npm install`
 4. Open cmd in the bot's folder and install the npm dependencies from `package.json`
-5. Setup `settings.json`
-6. Open `launchbot.bat` to make the bot online.
 # 24/7 host (Windows)
 1. Open cmd in the folder and type `npm install pm2`
 2. Type in the cmd `pm2 start index.js` abd the bot will be online 24/7!
