@@ -5,7 +5,7 @@ const jimp = require('jimp');
 const pretty = require('pretty-ms');
 const snumber = require('short-number')
 
-exports.run = (msg, bot) => {
+exports.run = async (client, msg, args) => {
     msg.channel.send("**Generating...**").then(gen => {
 
         let time = (new Date).getTime();
