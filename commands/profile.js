@@ -35,7 +35,7 @@ exports.run = async (client, msg, args) => {
                         let Avatar = Canvas.Image;
                         let ava = new Avatar;
                         ava.src = buf;
-                        ctx.drawImage(ava, 100, 100, 300, 300);
+                        ctx.drawImage(ava, 100, 50, 300, 300);
 
                         //Sent
                         try {
