@@ -20,12 +20,6 @@ exports.run = async (client, msg, args) => {
         ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
         ctx.shadowOffsetY = 2;
         ctx.shadowBlur = 2;
-        fs.readFile(back, function (err, Background) {
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 2000, 2000);
             fs.readFile('../images/profiletest.png', (err, profile) => {
                 if (err) return console.log(err);
                 let that = new Image;
