@@ -106,16 +106,6 @@ exports.run = (msg, bot) => {
     })
 }
 
-exports.conf = {
-    userPerm: [],
-    botPerm: ["SEND_MESSAGES"],
-    coolDown: 0,
-    dm: false,
-    category: "Social",
-    help: "Get your profile or a users profile.",
-    args: "<@mention>",
-}
-
 function wrapText(ctx, text, maxWidth) {
     const words = text.split(' ');
     let lines = [];
@@ -164,6 +154,6 @@ exports.help = {
     authorPerm: [],
     example: '@Jus de Patate#0190',
     alias: [
-        null
+        'profile'
     ]
 };
