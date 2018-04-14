@@ -37,12 +37,6 @@ exports.run = async (client, msg, args) => {
                         ava.src = buf;
                         ctx.drawImage(ava, 117, 122, 550, 550);
 
-                        //Level
-                        ctx.font = "bold 286px Helvetica";
-                        ctx.fillStyle = "#FFFFFF";
-                        ctx.textAlign = "center";
-                        ctx.fillText(lvl, 1625, 520);
-
                         //Name
                         ctx.font = "bold 175px Helvetica";
                         ctx.fillStyle = "#FFFFFF";
@@ -58,30 +52,6 @@ exports.run = async (client, msg, args) => {
                         ctx.font = "bold 120px Helvetica";
                         ctx.textAlign = "center";
                         ctx.fillText(sent, 311, 1415);
-
-                        //Global Rank
-                        ctx.font = "bold 100px Helvetica";
-                        console.log("Rank: " + rank)
-                        try {
-                            rank = snumber(rank);
-                        } catch (error) {
-                            rank = 0;
-                        }
-                        ctx.fillText(rank, 1756, 1390);
-
-                        //Money
-                        ctx.font = "bold 130px Helvetica";
-                        ctx.textAlign = "right";
-                        ctx.fillText(taco, 1928, 1176);
-
-                        //Infobox
-                        ctx.font = "bold 105px Helvetica";
-                        ctx.textAlign = "left";
-                        let lines = wrapText(ctx, shout, 1831)
-                        lines.forEach((line, i) => {
-                            if (i < 4) ctx.fillText(line, 85, 1626 + (i * 100));
-
-                        });
 
                         let canvas2 = new Canvas(400, 400)
                         let ctx2 = canvas2.getContext('2d')
