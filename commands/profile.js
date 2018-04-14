@@ -94,7 +94,6 @@ exports.run = async (client, msg, args) => {
                             gen.edit("**Here is " + user.username + "'s Profile**");
                         })
                     })
-                })
             })
         })
     })
