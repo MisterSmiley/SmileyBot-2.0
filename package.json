@@ -35,7 +35,7 @@
     "windows-build-tools": "^2.2.1",
     "xml2js": "^0.4.19",
     "youtube-info": "^1.2.0",
-    "ytdl-core": "^0.20.2"
+    "ytdl-core": "^0.20.2",
     "canvas": "git://github.com/elspoono/node-canvas-heroku.git"
   },
   "devDependencies": {
