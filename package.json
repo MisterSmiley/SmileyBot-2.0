@@ -1,6 +1,9 @@
 {
-  "name": "smileybot",
-  "version": "0.0.1",
+  "name": "smileybot", 
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "A discord bot",
   "dependencies": {
     "api-npm": "^1.0.0",
