@@ -16,3 +16,16 @@ exports.run = async (client, msg, args) => {
         msg.channel.send({embed});
         }
       };
+
+exports.help = {
+    category: 'music',
+    usage: '[Link or Term]',
+    description: 'Youtube Info',
+    detail: 'Youtube Info',
+    botPerm: ['SEND_MESSAGES', 'EMBED_LINKS'],
+    authorPerm: [],
+    example: 'song name / link',
+    alias: [
+        'yinfo'
+    ]
+};
