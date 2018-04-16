@@ -1,4 +1,8 @@
-const yInfo = require('youtube-info');
+/**
+*@function {fetchSongData} 
+ */
+ 
+ const yInfo = require('youtube-info');
 const fetchSongData = require('../functions/music/fetchSongData.js');
 const Discord = require('discord.js');
 
