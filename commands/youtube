@@ -26,6 +26,6 @@ exports.help = {
     authorPerm: [],
     example: 'song name / link',
     alias: [
-        'yinfo'
+        'youtube'
     ]
 };
