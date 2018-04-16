@@ -1,7 +1,6 @@
 const config = require('../config/config.json');
 exports.run = async (client, msg, args) => {
-    msg.channel.send("<:annonces:403632327328268301">
-
+    msg.channel.send("<:annonces:403632327328268301>");
 };
 exports.help = {
     category: 'devonly',
