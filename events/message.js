@@ -19,7 +19,7 @@ fs.readdir('./commands/', (err, files) => {
     let commandIndex = 1;
     files.forEach(file => {
         let
-            info = require('../commands/' + file),
+            info = ('../commands/' + file),
             helpName = file.split('.')[0],
             alias2 = info.help.alias;
 
@@ -53,11 +53,11 @@ exports.run = (client, msg) => {
     let command = args.shift().toLowerCase();
     // Checking if the command has the potential to be a command
     try {
-        let commandFile = require('../commands/' + command + '.js');
+        let commandFile = ('../commands/' + command + '.js');
         if (PermissionChecker(
-                require(`../commands/${command}`).help.botPerm,
-                require(`../commands/${command}`).help.authorPerm,
-                require(`../commands/${command}`),
+                (`../commands/${command}`).help.botPerm,
+                (`../commands/${command}`).help.authorPerm,
+                (`../commands/${command}`),
                 msg,
                 client)) {
             return;
@@ -67,11 +67,11 @@ exports.run = (client, msg) => {
         logger.info(`${chalk.cyan(command)}` + ` has just been executed by ${chalk.yellow(msg.author.username)} [${chalk.magenta(msg.author.id)}]`);
     } catch (err) {
         if (alias[command]) {
-            let commandFile = require('../commands/' + alias[command] + '.js');
+            let commandFile = ('../commands/' + alias[command] + '.js');
             if (PermissionChecker(
-                    require(`../commands/${alias[command]}`).help.botPerm,
-                    require(`../commands/${alias[command]}`).help.authorPerm,
-                    require(`../commands/${alias[command]}`),
+                    (`../commands/${alias[command]}`).help.botPerm,
+                    (`../commands/${alias[command]}`).help.authorPerm,
+                    (`../commands/${alias[command]}`),
                     msg,
                     client)) {
                 return;
