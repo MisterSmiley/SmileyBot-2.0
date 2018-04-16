@@ -1,0 +1,18 @@
+const yInfo = require('youtube-info');
+const fetchSongData = require('../functions/music/fetchSongData.js');
+const Discord = require('discord.js');
+
+exports.run = async (client, msg, args) => {
+    let searchTerms = args.join(' ');
+    let videoId = await fetchSongData(client, msg, searchTerms);
+    if (videoId) {
+        let yInfo = await InfoFetcher(videoId);
+        const embed = new Discord.RichEmbed()
+            .setColor(0x00ABE0)
+            .setAuthor(msg.author.username, client.user.displayAvatarURL)
+            .setThumbnail(yInfo.thumbnailUrl)
+            .addField('Song Info', `**📥 Uploaded By:** ${yInfo.owner}\n**🕐 Duration:** ${(yInfo.duration / 60).toFixed(2)} Minutes\n**💻 Published:** ${yInfo.datePublished}`);
+            .addField('Song Stats', `**👀 Views:** ${yInfo.views}\n**👍 Likes:** ${yInfo.likeCount}\n**👎 Dislikes:** ${yInfo.dislike.Count}\n**📖 Genres:** ${yInfo.genre}`
+        msg.channel.send({embed});
+        }
+      };
