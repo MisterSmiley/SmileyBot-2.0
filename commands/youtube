@@ -2,8 +2,7 @@
 *@function {fetchSongData} 
  */
  
- const yInfo = require('youtube-info');
-const fetchSongData = require('../functions/music/fetchSongData.js');
+const InfoFetcher = require('youtube-info');
 const Discord = require('discord.js');
 
 exports.run = async (client, msg, args) => {
