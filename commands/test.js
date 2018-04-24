@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 exports.run = async (client, msg, args) => {
     let pages = ["Test1", "Test2"]
     let page = 1;
-    const embed = new Discord.MessageEmbed()
+    const embed = new Discord.RichEmbed()
         .setColor(0xffffff)
         .setFooter(`Page ${page} of ${pages.length}`)
         .setDescription(pages[page - 1])
