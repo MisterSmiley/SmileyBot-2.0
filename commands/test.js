@@ -12,8 +12,8 @@ exports.run = async (client, msg, args) => {
 
         msgEmbed.react('⏪').then(r => { msgEmbed.react('⏩')
             
-            const backwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏪' && user.id === message.author.id, { time: 60000 });
-            const forwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏩' && user.id === message.author.id, { time: 60000 });
+            const backwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏪' && user.id === msg.author.id, { time: 60000 });
+            const forwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏩' && user.id === msg.author.id, { time: 60000 });
 
             function reset() {
                 embed.setDescription(pages[page - 1]);
