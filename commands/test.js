@@ -18,7 +18,7 @@ exports.run = async (client, msg, args) => {
             function reset() {
                 embed.setDescription(pages[page - 1]);
                 embed.setFooter(`Page ${page} of ${pages.length}`);
-                msg.edit(embed)
+                msgEmbed.edit(embed)
             }
 
             backwards.on('collect', r => {
