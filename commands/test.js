@@ -34,6 +34,7 @@ exports.run = async (client, msg, args) => {
             })
         })
     })
+}
 exports.help = {
     category: 'devonly',
     usage: '[devonly]',
