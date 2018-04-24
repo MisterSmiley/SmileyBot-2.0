@@ -10,7 +10,7 @@ exports.run = async (client, msg, args) => {
 
     msg.channel.send(embed).then(msgEmbed => {
 
-        msg.react('⏪').then(r => { msgEmbed.react('⏩')
+        msgEmbed.react('⏪').then(r => { msgEmbed.react('⏩')
             
             const backwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏪' && user.id === message.author.id, { time: 60000 });
             const forwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏩' && user.id === message.author.id, { time: 60000 });
