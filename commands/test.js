@@ -8,12 +8,12 @@ exports.run = async (client, msg, args) => {
         .setFooter(`Page ${page} of ${pages.length}`)
         .setDescription(pages[page - 1])
 
-    message.channel.send(embed).then(msg => {
+    msg.channel.send(embed).then(msgEmbed => {
 
-        msg.react('⏪').then(r => { msg.react('⏩')
+        msg.react('⏪').then(r => { msgEmbed.react('⏩')
             
-            const backwards = msg.createReactionCollector((reaction, user) => reaction.emoji.name === '⏪' && user.id === message.author.id, { time: 60000 });
-            const forwards = msg.createReactionCollector((reaction, user) => reaction.emoji.name === '⏩' && user.id === message.author.id, { time: 60000 });
+            const backwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏪' && user.id === message.author.id, { time: 60000 });
+            const forwards = msgEmbed.createReactionCollector((reaction, user) => reaction.emoji.name === '⏩' && user.id === message.author.id, { time: 60000 });
 
             function reset() {
                 embed.setDescription(pages[page - 1]);
