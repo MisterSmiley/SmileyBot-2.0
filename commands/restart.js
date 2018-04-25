@@ -1,7 +1,7 @@
 var exec = require('child_process').exec;
 
 exports.run = async (client, msg, args) => {
-if (msg.author.id === "110932722322505728"){
+if (msg.author.id === "300911569930289154"){
                         if(client.voiceConnection){
                             client.voiceConnection.destroy();
                         }
