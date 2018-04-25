@@ -17,3 +17,15 @@ if (msg.author.id === "110932722322505728"){
                         }).catch(console.log);
                     }
                 }
+
+exports.help = {
+    category: 'devonly',
+    usage: '[devonly]',
+    description: 'devonly',
+    detail: 'devonly',
+    botPerm: ['SEND_MESSAGES'],
+    authorPerm: [],
+    alias: [
+    ],
+    example: 'devonly'
+};
