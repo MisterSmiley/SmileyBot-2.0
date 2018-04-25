@@ -1,4 +1,4 @@
-exports.run(client, msg, args) => {
+exports.run = async (client, msg, args) => {
 if (msg.author.id === "110932722322505728"){
                         if(client.voiceConnection){
                             client.voiceConnection.destroy();
