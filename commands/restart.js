@@ -15,7 +15,7 @@ if (msg.author.id === "300911569930289154"){
                                 console.log(`stdout: ${stdout}`);
                                 console.log(`stderr: ${stderr}`);
                             });
-                            bot.destroy();
+                            client.destroy();
                         }).catch(console.log);
                     }
                 }
