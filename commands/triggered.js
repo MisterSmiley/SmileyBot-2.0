@@ -9,8 +9,8 @@ message.channel.send({ file: { attachment: "https://cute-api.tk/api/v1/generate/
 exports.help = {
 category: "fun",
 usage: "",
-description: "It's a triggered.. What do you expect this description to say!?!?"
-detail: "<:never:439014129747886081>"
+description: "It's a triggered.. What do you expect this description to say!?!?",
+detail: "<:never:439014129747886081>",
 botPerm: ['SEND_MESSAGES'],
 example: false,
     alias: [
