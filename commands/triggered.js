@@ -1,9 +1,9 @@
 exports.run = async (client, msg, args) => {
   var image = message.author.avatarURL; 
-} 
+};
 message.channel.send({ file: { attachment: "https://cute-api.tk/api/v1/generate/triggered/url=" + image, name: "triggered.gif" 
-}}) 
-}
+}});
+};
 
 
 exports.help = {
