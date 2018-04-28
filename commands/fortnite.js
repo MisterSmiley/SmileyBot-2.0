@@ -1,5 +1,5 @@
 const Fortnite = require('fortnite');
-const stats = new Fortnite(process.env.FORTNITEKEY);
+const stats = new Fortnite("NDA5Mjg3NDM1MzkwODEyMTcw.DcYCkA.nrFqjWvZ0OhZuuZ_gNLtc5T5Ttc");
 const Discord = require('discord.js')
 
 exports.run = (client, msg, args) => {
