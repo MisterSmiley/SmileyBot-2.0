@@ -38,7 +38,7 @@ const handler = err => {
     logger.error(err);
 };
 
-client.login(config.TOKEN).catch(handler);
+client.login(process.env.TOKEN).catch(handler);
 client.on('warn', info => {logger.warn(info)});
 client.on('error', info => {logger.error(info)});
 
