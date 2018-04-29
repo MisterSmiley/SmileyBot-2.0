@@ -20,7 +20,7 @@ exports.run = async (bot, msg, args) => {
             .setDescription(`[Click here for the strawpoll](http://strawpoll.me/${poll.body.id})`)
             .setColor('#eacd10')
             .addField('Strawpoll created from:', msg.author.tag)
-            .addField('Choices:', args.slice(title.split(' ').length).join(' ').split(',').length < 2);
+            .addField('Choices:', args.slice(title.split(' ').length).join(' ').split(',').length < 2).join;
 
         msg.channel.send({embed});
 };
@@ -32,7 +32,7 @@ exports.help = {
     detail: 'Creates a new strawpoll with given options',
     botPerm: ['SEND_MESSAGES', 'EMBED_LINKS'],
     authorPerm: [],
-    example: '"Is may the best bot ever?" Yes,No',
+    example: '"Is SmileyBot the best bot ever?" Yes,No',
     alias: [
         'poll'
     ]
