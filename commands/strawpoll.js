@@ -9,18 +9,18 @@ exports.run = async (bot, msg, args) => {
         if (args.slice(title.split(' ').length).join(' ').split(',').length < 2) {
             return msg.channel.send('Please give at least 2 options');
         }
-        let poll = await sf.post('https://strawpoll.me/api/v2/polls').send({
-            title,
-            options: args.slice(title.split(' ').length).join(' ').split(','),
-            multi: false
+        let poll = var poll = { title: title, options: [ args.slice(title.split(' ').length).join(' ').split(',') ] };
+await sf.post(url: 'https://strawpoll.me/api/v2/polls',
+              followAllRedirects: true, 
+              body: poll,
+              json: true
         });
-        msg.delete();
         const embed = new discord.RichEmbed()
             .setTitle('Strawpoll | \'' + title + '\'')
             .setDescription(`[Click here for the strawpoll](http://strawpoll.me/${poll.body.id})`)
             .setColor('#eacd10')
             .addField('Strawpoll created from:', msg.author.tag)
-            .addField('Choices:', args.slice(title.split(' ').length).join(' ').split(',').length < 2).join;
+            .addField('Choices:', args.slice(title.split(' ').length).join(' ').split(',');
 
         msg.channel.send({embed});
 };
