@@ -9,7 +9,7 @@ exports.run = async (bot, msg, args) => {
         if (args.slice(title.split(' ').length).join(' ').split(',').length < 2) {
             return msg.channel.send('Please give at least 2 options');
         }
-        let poll = var poll = { title: title, options: [ args.slice(title.split(' ').length).join(' ').split(',') ] };
+        var poll = { title: title, options: [ args.slice(title.split(' ').length).join(' ').split(',') ] };
 await sf.post(url: 'https://strawpoll.me/api/v2/polls',
               followAllRedirects: true, 
               body: poll,
