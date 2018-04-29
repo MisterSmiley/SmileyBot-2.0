@@ -16,12 +16,13 @@ await sf.post({
               body: poll,
               json: true
         });
+        let choices = args.slice(title.split(' ').length).join(' ').split(',');
         const embed = new discord.RichEmbed()
             .setTitle('Strawpoll | \'' + title + '\'')
             .setDescription(`[Click here for the strawpoll](http://strawpoll.me/${poll.body.id})`)
             .setColor('#eacd10')
             .addField('Strawpoll created from:', msg.author.tag)
-            .addField('Choices:', args.slice(title.split(' ').length).join(' ').split(',');
+            .addField('Choices:', choices);
 
         msg.channel.send({embed});
 };
