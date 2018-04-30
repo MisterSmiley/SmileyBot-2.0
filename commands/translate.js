@@ -7,12 +7,12 @@ exports.run = async (client, msg, args) => {
     let language;
     language = toTrans[toTrans.length - 2] === 'to' ? toTrans.slice(toTrans.length - 2, toTrans.length)[1].trim() : undefined;
     if (!language) {
-        return msg.reply(`Please supply valid agruments.\n**Example** \`${config}translate May is my favorite bot to english\``);
+        return msg.reply(`Please supply valid agruments.\n**Example** \`${config}translate Ich mag SmileyBot to english\``);
     }
     let finalToTrans = toTrans.slice(toTrans.length - toTrans.length, toTrans.length - 2).join(' ');
     translate(finalToTrans, {to: language}).then(res => {
         const embed = new Discord.RichEmbed()
-            .setAuthor('May\'s translator', client.user.displayAvatarURL)
+            .setAuthor('SmileyBot', client.user.displayAvatarURL)
             .setColor(Math.floor((Math.random() * 1600000) + 6))
             .addField('Translator:', `**From:** ${res.from.language.iso}\n\`\`\`${finalToTrans}\`\`\`\n**To: **${language}\n\`\`\`${res.text}\`\`\``);
         msg.channel.send({embed});
@@ -33,7 +33,7 @@ exports.help = {
     detail: 'Translate words from different languages',
     botPerm: ['SEND_MESSAGES', 'EMBED_LINKS'],
     authorPerm: [],
-    example: 'Ich mag May to english',
+    example: 'Ich mag SmileyBotto english',
     alias: [
         'trans'
     ]
