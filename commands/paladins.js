@@ -13,6 +13,7 @@ hirez.paladins('PC').getMatchHistory('AlexGames360')
   .then((res) => {
   console.log(res)
   })
+};
   
   exports.help = {
     category: 'DeveloperOnly',
