@@ -16,7 +16,8 @@ hirez.paladins('PC').getUser('AlexGames360')
  snekfetch.post('https://www.hastebin.com/documents').send(res)
  .then(reply => {
   msg.channel.send(`https://www.hastebin.com/${reply.body.key}.js`);
- }});
+ })
+});
 };
   
   exports.help = {
