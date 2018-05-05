@@ -1,3 +1,4 @@
+/// EN REDEV COMPLET
 const Fortnite = require('fortnite');
 const stats = new Fortnite("NDA5Mjg3NDM1MzkwODEyMTcw.DcYCkA.nrFqjWvZ0OhZuuZ_gNLtc5T5Ttc");
 const Discord = require('discord.js')
