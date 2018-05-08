@@ -25,7 +25,7 @@ exports.run = async (client, msg, args) => {
             .setColor(0x00ABE0)
             .setAuthor('Added new song to the queue', client.user.displayAvatarURL)
             .setThumbnail(yInfo.thumbnailUrl)
-            .addField('Song Info', `**Uploaded By:** ${yInfo.owner}\n**Duration:** ${(yInfo.duration / 60).toFixed(2)} Minutes\n**Views:** ${yInfo.views}`);
+            .addField('Song Info', `**Name:** ${yInfo.title}\n**Uploaded By:** ${yInfo.owner}\n**Duration:** ${(yInfo.duration / 60).toFixed(2)} Minutes\n**Views:** ${yInfo.views}`);
         msg.channel.send({embed});
     } else {
 
