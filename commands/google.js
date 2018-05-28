@@ -9,10 +9,13 @@ exports.run = (client, msg, args) => {
     }
 
     google(toSearch, async (err, res) => {
+        for (var i = 0; i < res.links.length; ++i) {
+    var link = res.links[i];
+            
         await msg.react('✅');
         let embed = new Discord.RichEmbed()
         .setTitle("SmileyBot")
-        .addField("**I found**", `[${res.title}](${res.href}) \n\n${res.description}`)
+        .addField("**I found**", `[${link.title}](${link.href}) \n\n${link.description}`)
         await msg.channel.send(embed);
     });
 };
