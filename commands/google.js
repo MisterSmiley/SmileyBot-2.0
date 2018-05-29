@@ -14,6 +14,7 @@ exports.run = (client, msg, args) => {
             
         await msg.react('✅');
         let embed = new Discord.RichEmbed()
+        .setColor("#c20d0d")
         .setTitle("SmileyBot")
         .addField("**I found**", `[${link.title}](${link.href}) \n\n${link.description}`)
         await msg.channel.send(embed);
