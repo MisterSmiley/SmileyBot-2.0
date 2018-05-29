@@ -9,7 +9,7 @@ exports.run = (client, msg, args) => {
     }
 
     google(toSearch, async (err, res) => {
-        for (var i = 0; i < res.links.length; ++i) {
+        for (var i = 0; i < 1; ++i) {
     var link = res.links[i];
             
         await msg.react('✅');
