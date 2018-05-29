@@ -14,9 +14,11 @@ exports.run = (client, msg, args) => {
             
         await msg.react('✅');
         let embed = new Discord.RichEmbed()
+        .setThumbnail("https://cdn.discordapp.com/attachments/413814161395548162/450812278346874881/2000px-Google__G__Logo.svg.png")
         .setColor("#c20d0d")
+        .setTimestamp()
         .setTitle("SmileyBot")
-        .addField("**I found**", `[${link.title}](${link.href}) \n\n${link.description}`)
+        .addField("**<:google:450812327118241793> I found**", `[${link.title}](${link.href}) \n\n${link.description}`)
         await msg.channel.send(embed);
         }
     });
