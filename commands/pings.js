@@ -29,3 +29,15 @@ exports.run = async(client, message, args, tools) => {
   message.channel.send(embed);
   
 };
+
+exports.help = {
+    category: 'util',
+    usage: false,
+    description: 'Last pings',
+    detail: 'a list of the last pings',
+    botPerm: ['SEND_MESSAGES'],
+    authorPerm: [],
+    alias: [
+        null
+    ]
+};
