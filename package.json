@@ -37,6 +37,8 @@
     "spongeuscator": "^0.1.3",
     "xml2js": "^0.4.19",
     "youtube-info": "^1.2.0",
-    "ytdl-core": "^0.20.2"
+    "ytdl-core": "^0.20.2",
+    "paladins-api": "1.4.8",
+    "events": "1.1.1"
   }
 }
