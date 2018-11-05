@@ -29,7 +29,6 @@ String.prototype.toHHMMSS = function () {
     return hours+':'+minutes+':'+seconds;
 }
 exports.run = async (client, msg, args) => {
-        let args = message.content.split(' ')
         let player_name = args[1];
         var splited = player_name.split(":");
         var options = null;
