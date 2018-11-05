@@ -29,17 +29,17 @@ String.prototype.toHHMMSS = function () {
     return hours+':'+minutes+':'+seconds;
 }
 
-bot.on('ready', function () {
+client.on('ready', function () {
     console.log("Je suis connecté !")
-    bot.user.setPresence({ game: { name: '+help', type: 0 } })
+    client.user.setPresence({ game: { name: '+help', type: 0 } })
 })
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if(message.content.startsWith('+help')){
       let embed = new Discord.RichEmbed().
       setTitle("[°] Informations sur les commandes [°]")
-      .setAuthor(bot.user.username, bot.user.avatarURL)
+      .setAuthor(client.user.username, client.user.avatarURL)
       .setColor(0xf3ee27)
       .setDescription("\n" + "[°] **Paladins** [°]\n\n" +
       "``+paladins <pseudonyme en jeu>`` Pour obtenir vos informations de **bases** sur **votre compte** \n\n" +
