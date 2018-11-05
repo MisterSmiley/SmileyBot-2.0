@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+const client = Discord.Client()
 const paladins = require('paladins-api');
 const pal = new paladins('2116', 'A1A9076FF6214CEDBA99BBF8FD7EC166');
 var fs = require('fs');
