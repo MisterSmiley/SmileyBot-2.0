@@ -171,8 +171,7 @@ exports.run = async (client, msg, args) => {
                                         stringChampions3.replace("null", "")
                                         + "```")
                 }
-            console.log("[" + message.author.username + "]" + " Recherche sur le joueur " + player_name + " fini sans erreur")
-        })
+            console.log("[" + message.author.username + "]" + " Recherche sur le joueur " + player_name + " fini sans erreur")        
     }
 
 })
