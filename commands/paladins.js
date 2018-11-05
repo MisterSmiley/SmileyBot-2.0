@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-const client = new Discord.Client()
 const paladins = require('paladins-api');
 const pal = new paladins('2116', 'A1A9076FF6214CEDBA99BBF8FD7EC166');
 var fs = require('fs');
@@ -30,26 +28,7 @@ String.prototype.toHHMMSS = function () {
     if (seconds < 10) {seconds = "0"+seconds;}
     return hours+':'+minutes+':'+seconds;
 }
-
-client.on('ready', function () {
-    console.log("Je suis connecté !")
-    client.user.setPresence({ game: { name: '+help', type: 0 } })
-})
-
-client.on('message', message => {
-
-    if(message.content.startsWith('+help')){
-      let embed = new Discord.RichEmbed().
-      setTitle("[°] Informations sur les commandes [°]")
-      .setAuthor(client.user.username, client.user.avatarURL)
-      .setColor(0xf3ee27)
-      .setDescription("\n" + "[°] **Paladins** [°]\n\n" +
-      "``+paladins <pseudonyme en jeu>`` Pour obtenir vos informations de **bases** sur **votre compte** \n\n" +
-      "``+paladins champions:<pseudonyme en jeu>`` Vos informations de **bases** sur **votre compte** + sur **vos champions** \n\n")
-      message.channel.send({embed})
-    }
-    //Partie paladins
-    if(message.content.startsWith('+paladins')){
+exports.run = async (client, msg, args) => {
         let args = message.content.split(' ')
         let player_name = args[1];
         var splited = player_name.split(":");
@@ -201,7 +180,7 @@ client.on('message', message => {
 })
 
   exports.help = {
-    category: 'DeveloperOnly',
+    category: 'Util',
     usage: 'test',
     description: 'test',
     detail: 'test',
