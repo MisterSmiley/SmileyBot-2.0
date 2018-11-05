@@ -31,7 +31,7 @@ let player_name = args[1];
                                         "\nDernière connexion: " + "   " + str2.Last_Login_Datetime + " (UTC)" +
                                         "```")
         }
-  });
+  };
 
   exports.help = {
     category: 'Util',
